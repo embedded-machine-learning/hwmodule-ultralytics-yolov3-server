@@ -19,7 +19,7 @@ setup_env()
 get_model_name()
 {
   MYFILENAME=`basename "$0"`
-  MODELNAME=`echo $MYFILENAME | sed 's/pt_yolov5_train_export_inf_//' | sed 's/.sh//'`
+  MODELNAME=`echo $MYFILENAME | sed 's/pt_yolov3_train_export_inf_//' | sed 's/.sh//'`
   echo Selected model: $MODELNAME
 }
 
@@ -199,9 +199,9 @@ YOLOVERSION=yolov3-oxfordpets
 
 # Yolo pretrained weights. Location ./weights/[WEIGHT_NAME].pt.
 # Weights for small versions of yolo, image size 640
-YOLOWEIGHTS=yolov3.pt
-#YOLOWEIGHTS=yolov3-spp.pt
-#YOLOWEIGHTS=yolov3-tiny.pt
+YOLOWEIGHTS=yolov3
+#YOLOWEIGHTS=yolov3-spp
+#YOLOWEIGHTS=yolov3-tiny
 
 # Yolo image size. Sizes: 640
 YOLOIMGSIZE=640
@@ -213,7 +213,7 @@ YOLODATA=oxford_pets
 
 # Set training batch size
 BATCHSIZE=32
-EPOCHS=1
+EPOCHS=300
 
 ############################################
 
